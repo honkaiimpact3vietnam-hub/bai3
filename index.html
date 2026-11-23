@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="ten_hoa_qua" placeholder="Nhập loại hoa quả">
+    <button onclick="main()">Xem giá</button>
+    <p id="ketqua"></p>
+    <script>
+        function main(){
+            var name_fruit = (document.getElementById("ten_hoa_qua").value);
+            var fruit_price = 0;
+            switch (name_fruit){
+                case "Ổi": fruit_price = 10000; break;
+                case "Dưa hấu": fruit_price = 20000; break;
+                case "Táo": fruit_price = 30000; break;
+                case "Cam": fruit_price = 15000; break;
+                case "Măng cụt": fruit_price = 50000; break;
+            }
+            document.getElementById("ketqua").innerHTML= `Giá ${name_fruit} là: ${fruit_price} VNĐ`
+        }
+    </script>
+</body>
+</html>
